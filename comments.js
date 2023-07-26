@@ -1,30 +1,19 @@
-//Create a web server
-const express = require('express');
-const app = express();
-const port = 3000;
-const path = require('path');
-const fs = require('fs');
-const bodyParser = require('body-parser');
-const { v4: uuidv4 } = require('uuid');
-const { response } = require('express');
-const { json } = require('body-parser');
-const { stringify } = require('querystring');
-const { Console } = require('console');
-const { send } = require('process');
-const { request } = require('http');
-const { resolve } = require('path');
-const { rejects } = require('assert');
-const { resolveSoa } = require('dns');
-const { type } = require('os');
-const { send } = require('process');
-const { request } = require('http');
-const { resolve } = require('path');
-const { rejects } = require('assert');
-const { resolveSoa } = require('dns');
-const { type } = require('os');
-const { send } = require('process');
-const { request } = require('http');
-const { resolve } = require('path');
+// Create web server
+// Run: node comments.js
+// Test: curl -X POST -d "comment=This is a comment" http://localhost:3000/api/comments
+//       curl http://localhost:3000/api/comments
+
+var express = require('express');
+var app = express();
+
+app.use(express.static(__dirname + '/public'));
+app.use(express.bodyParser())// 1. Create a web server
+
+
+
+
+
+
 
 
 
